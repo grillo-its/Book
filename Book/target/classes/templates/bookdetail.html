@@ -28,5 +28,7 @@
     </tr>
 </table>
 <a th:href="@{'/book/remove/' + ${book.getId()}}">Rimuovi</a>
+<br>
+<a th:href="@{'/json/titlebooksjson/' + ${book.titolo}}">Json del libro</a>
 </body>
 </html>
