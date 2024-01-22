@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<div>
+    <a href="/book/">Home</a>|
+    <a href="/book/add">Aggiungi</a>|
+    <a href="/user/list">Utenti</a>|
+    <a href="/user/logout">Logout</a>
+</div>
+
+<h1>Informazioni Libri</h1>
+<table>
+    <tr>
+        <td>Titolo:</td>
+        <td th:text="${book.titolo}"></td>
+    </tr>
+    <tr>
+        <td>Autore:</td>
+        <td th:text="${book.autore}"></td>
+    </tr>
+    <tr>
+        <td>Anno di pubblicazione:</td>
+        <td th:text="${book.annoPubblicazione}"></td>
+    </tr>
+    <tr>
+        <td>Prezzo:</td>
+        <td th:text="${book.prezzo}"></td>
+    </tr>
+</table>
+<a th:href="@{'/book/remove/' + ${book.getId()}}">Rimuovi</a>
+</body>
+</html>

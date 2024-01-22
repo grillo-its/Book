@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Dettaglio Utente</title>
+</head>
+<body>
+
+<div>
+    <a href="/book/">Home</a>|
+    <a href="/book/add">Aggiungi</a>|
+    <a href="/user/list">Utenti</a>|
+    <a href="/user/logout">Logout</a>
+</div>
+
+<h1>Dettaglio utente</h1>
+<table>
+    <tr>
+        <td>Nome:</td>
+        <td th:text="${user.nome}"></td>
+    </tr>
+    <tr>
+        <td>Cognome:</td>
+        <td th:text="${user.cognome}"></td>
+    </tr>
+    <tr>
+        <td>Username:</td>
+        <td th:text="${user.username}"></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td th:text="${user.password}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Lista Libri</title>
+</head>
+<body>
+
+<div>
+    <a href="/book/">Home</a>|
+    <a href="/book/add">Aggiungi</a>|
+    <a href="/user/list">Utenti</a>|
+    <a href="/user/logout">Logout</a>
+</div>
+
+<h1>Lista Libri</h1><br>
+<span th:text="${msg}"></span>
+<table>
+    <th:block th:each="book : ${books}">
+        <tr>
+            <td th:text="${book.titolo}"></td>
+            <td th:text="${book.prezzo}">€</td>
+            <td><a th:href="@{'detail/' + ${book.getId()}}">Dettaglio</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

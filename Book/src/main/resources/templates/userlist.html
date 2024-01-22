@@ -1,0 +1,27 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Lista utenti</title>
+</head>
+<body>
+<div>
+    <a href="/book/">Home</a>|
+    <a href="/book/add">Aggiungi</a>|
+    <a href="/user/list">Utenti</a>|
+    <a href="/user/logout">Logout</a>
+</div>
+
+<h1>Lista utenti</h1><br>
+<table>
+    <th:block th:each="user : ${users}">
+        <tr>
+            <td th:text="${user.nome}"></td>
+            <td th:text="${user.cognome}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+            <td><a th:href="@{'detail/' + ${user.getId()}}">Dettaglio</a></td>
+            <td><a th:href="@{'remove/' + ${user.getId()}}">Rimuovi</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
